@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIPRI - Em Manutenção</title>
+    <link rel="icon" href="img/logotipo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Body: Centralização e fundo neutro */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Container de manutenção com animações e design elegante */
+        .maintenance-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Animação de fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Título de manutenção com estilo e animação */
+        .maintenance-container h1 {
+            color: #d32f2f;
+            font-size: 40px;
+            margin-bottom: 20px;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        /* Animação do título */
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Texto da descrição com animação suave */
+        .maintenance-container p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+
+        /* Animação de entrada do texto da descrição */
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Link de contato ou chamada à ação */
+        .maintenance-container a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #d32f2f;
+            font-size: 18px;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Efeito ao passar o mouse */
+        .maintenance-container a:hover {
+            background-color: #b71c1c;
+            transform: scale(1.05);
+        }
+
+        /* Animação do botão */
+        .maintenance-container a {
+            animation: popUpButton 0.8s ease-out;
+        }
+
+        @keyframes popUpButton {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <h1>Estamos em Manutenção</h1>
+        <p>Estamos trabalhando para melhorar sua experiência. O Sistema estará disponível em breve.</p>
+        <p>Enquanto isso, aproveite este lindo dia! Não se preocupe, logo voltaremos.</p>
+    </div>
+</body>
+</html>
