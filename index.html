@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIPRI - Pesque os MELHORES Preços!</title>
-	<link rel="icon" href="img/logotipo.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="js/protec.js" defer></script>
-
+    <link rel="icon" href="img/logotipo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
-    <img src="img/logo.png" alt="Logo FIPRI" class="logo">
-    <input type="text" id="search" placeholder="Buscar produtos...">
-		<div id="filter-container">
-			<select id="filter">
-				<option value="sem">Sem Filtro</option>
-				<option value="menor">Menor Preço</option>
-				<option value="maior">Maior Preço</option>
-			</select>
-		</div>
+        <img src="img/logo.png" alt="Logo FIPRI" class="logo">
+        <input type="text" id="search" placeholder="Buscar produtos..." aria-label="Campo de busca">
+        <div id="filter-container">
+            <select id="filter">
+                <option value="sem-filtro">Sem Filtro</option>
+                <option value="menor">Menor Preço</option>
+                <option value="maior">Maior Preço</option>
+            </select>
+        </div>
     </header>
+
     <main>
+		<!-- Novo espaço para anúncio -->
+    <div id="ad-banner">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8246275004240351"
+     crossorigin="anonymous"></script>
+	<!-- Superior -->
+		<ins class="adsbygoogle"
+			style="display:block"
+			data-ad-client="ca-pub-8246275004240351"
+			data-ad-slot="5439023347"
+			data-ad-format="auto"
+			data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+    </div>
         <div class="product-list" id="product-list">
-            <!-- Carrega os produtos aqui dentro. -->
+            <!-- Os produtos serão carregados dinamicamente aqui -->
         </div>
     </main>
-	<script type="module" src="js/controll.js" defer></script>	
-<script src="js/main.js"></script>
+
+    <script type="module" src="js/controll.js"></script>	
+    <script src="js/main.js" defer></script>
 </body>
 </html>
