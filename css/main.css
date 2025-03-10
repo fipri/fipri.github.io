@@ -13,18 +13,37 @@ body {
     color: #333;
 }
 
-/* Adicionando o estilo para o contêiner de anúncios */
-.ad-container {
-    width: 90%;
-    height: 20vh; /* 20% da altura da tela */
-    margin: 20px auto; /* Centraliza o contêiner */
-    background-color: #f0f0f0; /* Cor de fundo */
+#ad-banner {
+    width: 100%;
+    max-width: 90%; /* Tamanho padrão para anúncios grandes */
+    height: 90px; /* Altura comum */
+    margin: 80px auto 20px; /* Ajuste para não sobrepor o header */
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ccc; /* Borda opcional */
-    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 768px) {
+    #ad-banner {
+        max-width: 95%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px;
+        margin: 70px auto 15px;
+    }
+}
+
+/* Ajuste no main para evitar sobreposição com header fixo */
+main {
+    padding: 160px 20px 20px; /* Compensa altura do header e ad-banner */
+}
+
 
 
 header {
