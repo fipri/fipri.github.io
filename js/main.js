@@ -260,13 +260,31 @@ const palavrasChave = [
 	"marinho", "grosso", "alho", "kg", "roxo", "embalagem", "tempero"
 ];
 
-// Event listener para disparar a pesquisa ao pressionar "Enter"
-document.getElementById("search").addEventListener("input", function(e) {
-    if (e.inputType === "insertLineBreak" || e.key === "Enter" || e.keyCode === 13) {
-        e.preventDefault(); // Impede a quebra de linha ou qualquer outro comportamento padrão
-        pesqProd(); // Chama a função de pesquisa
+
+const searchInput = document.getElementById("search");
+
+let typingTimer;  // Temporizador para a pesquisa
+
+searchInput.addEventListener("keydown", function(e) {
+    // Verifica se a tecla pressionada foi a tecla "Enter" (desktop)
+    if (e.key === "Enter" || e.keyCode === 13) {
+        e.preventDefault();  // Impede a quebra de linha ou qualquer comportamento padrão
+        pesqProd();  // Chama a função para pesquisa
     }
 });
+
+// Detecta dispositivos móveis (touch)
+if (window.matchMedia("(pointer: coarse)").matches) {
+    // Se for um dispositivo móvel, executa a pesquisa depois de 2 segundos de inatividade
+    searchInput.addEventListener("input", function(e) {
+        clearTimeout(typingTimer);  // Limpa o temporizador anterior
+
+        // Configura um novo temporizador para 2 segundos
+        typingTimer = setTimeout(function() {
+            pesqProd();  // Chama a função para pesquisa após 2 segundos sem digitar
+        }, 2000);  // 2000 milissegundos = 2 segundos
+    });
+}
 
 
 
