@@ -262,7 +262,9 @@ const palavrasChave = [
 
 // Event listener para disparar a pesquisa ao pressionar "Enter"
 document.getElementById("search").addEventListener("keydown", function(e) {
+	alert("entrou no search!")
     if (e.key === "Enter" || e.keyCode === 13) {
+		alert("detectou o enter!")
         e.preventDefault(); // Impede o comportamento padrão do Enter, como a quebra de linha
         pesqProd(); // Chama a função de pesquisa
     }
