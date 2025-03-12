@@ -268,6 +268,7 @@ let typingTimer;  // Temporizador para a pesquisa
 searchInput.addEventListener("keydown", function(e) {
     // Verifica se a tecla pressionada foi a tecla "Enter" (desktop)
     if (e.key === "Enter" || e.keyCode === 13) {
+		alert("Enter detecatado!")
         e.preventDefault();  // Impede a quebra de linha ou qualquer comportamento padrão
         pesqProd();  // Chama a função para pesquisa
     }
@@ -275,6 +276,7 @@ searchInput.addEventListener("keydown", function(e) {
 
 // Detecta dispositivos móveis (touch)
 if (window.matchMedia("(pointer: coarse)").matches) {
+	alert("dispositivo movel detectado!")
     // Se for um dispositivo móvel, executa a pesquisa depois de 2 segundos de inatividade
     searchInput.addEventListener("input", function(e) {
         clearTimeout(typingTimer);  // Limpa o temporizador anterior
