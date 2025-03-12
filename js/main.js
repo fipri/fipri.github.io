@@ -261,14 +261,14 @@ const palavrasChave = [
 ];
 
 // Event listener para disparar a pesquisa ao pressionar "Enter"
-document.getElementById("search").addEventListener("keydown", function(e) {
-	alert("entrou no search!")
-    if (e.key === "Enter" || e.keyCode === 13) {
-		alert("detectou o enter!")
-        e.preventDefault(); // Impede o comportamento padrão do Enter, como a quebra de linha
+document.getElementById("search").addEventListener("input", function(e) {
+    if (e.inputType === "insertLineBreak" || e.key === "Enter" || e.keyCode === 13) {
+        e.preventDefault(); // Impede a quebra de linha ou qualquer outro comportamento padrão
         pesqProd(); // Chama a função de pesquisa
     }
 });
+
+
 
 function pesqProd(){
         termoPesquisa = this.value.trim().toLowerCase();
