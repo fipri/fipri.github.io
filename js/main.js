@@ -289,7 +289,7 @@ if (window.matchMedia("(pointer: coarse)").matches) {
 
 
 function pesqProd(){
-        termoPesquisa = this.value.trim().toLowerCase();
+        termoPesquisa = searchInput.value.trim().toLowerCase();
         const filtro = document.getElementById("filter").value; // Valor do combobox
         const noResultsMessage = document.getElementById("no-results-message");
         let visibleProducts = [];
