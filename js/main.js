@@ -261,9 +261,14 @@ const palavrasChave = [
 ];
 
 // Event listener para disparar a pesquisa ao pressionar "Enter"
-document.getElementById("search").addEventListener("keypress", function(e) {
+document.getElementById("search").addEventListener("keydown", function(e) {
     if (e.key === "Enter" || e.keyCode === 13) {
-        e.preventDefault(); // Impede o comportamento padrão do Enter
+        e.preventDefault(); // Impede o comportamento padrão do Enter, como a quebra de linha
+        pesqProd(); // Chama a função de pesquisa
+    }
+});
+
+function pesqProd(){
         termoPesquisa = this.value.trim().toLowerCase();
         const filtro = document.getElementById("filter").value; // Valor do combobox
         const noResultsMessage = document.getElementById("no-results-message");
@@ -315,10 +320,7 @@ document.getElementById("search").addEventListener("keypress", function(e) {
 
         exibirProdutosNaTela(visibleProducts);
         noResultsMessage.style.display = visibleProducts.length === 0 ? "block" : "none";
-    }
-});
-
-
+}
 
 
 
