@@ -274,9 +274,10 @@ searchInput.addEventListener("keydown", function(e) {
     }
 });
 
-// Detecta dispositivos móveis (touch)
-if (window.matchMedia("(pointer: coarse)").matches) {
-	alert("dispositivo movel detectado!")
+// Detecta dispositivos móveis com base no tamanho da tela
+if (window.innerWidth <= 768) {
+    alert("Dispositivo móvel detectado!");
+
     // Se for um dispositivo móvel, executa a pesquisa depois de 2 segundos de inatividade
     searchInput.addEventListener("input", function(e) {
         clearTimeout(typingTimer);  // Limpa o temporizador anterior
@@ -287,7 +288,6 @@ if (window.matchMedia("(pointer: coarse)").matches) {
         }, 2000);  // 2000 milissegundos = 2 segundos
     });
 }
-
 
 
 function pesqProd(){
