@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIPRI - Site não disponível.</title>
+    <link rel="icon" href="img/logotipo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .maintenance-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .maintenance-container h1 {
+            color: #d32f2f;
+            font-size: 40px;
+            margin-bottom: 20px;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .maintenance-container p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .maintenance-container a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #fff;
+            background-color: #d32f2f;
+            font-size: 18px;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .maintenance-container a:hover {
+            background-color: #b71c1c;
+            transform: scale(1.05);
+        }
+
+        .maintenance-container a {
+            animation: popUpButton 0.8s ease-out;
+        }
+
+        @keyframes popUpButton {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <h1>Site indisponível na sua região</h1>
+		<p>Infelizmente, o nosso site não está disponível para a sua região no momento. Estamos trabalhando para oferecer a melhor experiência possível, e em breve estaremos de volta para você!</p>
+		<p>Enquanto isso, que tal aproveitar o dia? Fique tranquilo, logo estaremos disponíveis para todos!</p>
+    </div>
+</body>
+</html>

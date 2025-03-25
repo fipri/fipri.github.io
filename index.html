@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIPRI - Pesque os MELHORES Preços!</title>
+    <link rel="icon" href="img/logotipo.ico" type="image/x-icon">
+	<script src="js/protec.js" defer></script>
+	<script src="js/blockacess.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8H3WC6Q4N"></script>
+</head>
+<body>
+	<div class="modal" id="termsModal">
+		<div class="modal-content">
+		<h2>Termos de Uso e Política de Privacidade</h2>
+		<p>Ao prosseguir, você concorda com os nossos Termos de Uso e a nossa Política de Privacidade. Recomendamos que leia atentamente os termos antes de continuar a navegação no site. Importante: os preços dos produtos apresentados são baseados nos dados divulgados pelos referidos supermercados de Campo Mourão, Paraná, mas não garantimos a exatidão dos valores e ressaltamos que não temos qualquer vínculo com os estabelecimentos mencionados. Nosso site é completamente independente.</p>
+		<button onclick="acceptTerms()">Aceitar</button>
+		</div>
+	</div>
+
+    <header>
+        <div class="header-info">
+            <img src="img/logo.png" alt="Logo FIPRI" class="logo">
+        </div>
+        <input type="text" id="search" placeholder="Buscar produtos..." aria-label="Campo de busca">
+        <div id="filter-container">
+            <select id="filter">
+                <option value="sem-filtro">Sem Filtro</option>
+                <option value="menor">Menor Preço</option>
+                <option value="maior">Maior Preço</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <div class="product-list" id="product-list">
+            <!-- carrega os produtos aqui -->
+        </div>
+    </main>	
+
+    <script src="js/main.js" defer></script>
+	<div class="terms-footer" onclick="window.location.href='termos.html'">
+		Termos de Uso e Privacidade
+	</div>
+</body>
+</html>
