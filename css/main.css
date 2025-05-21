@@ -279,7 +279,7 @@ main {
   }
   .product img {
     max-width: 220px;
-    height: 180px;
+    max-height: 180px;
   }
 }
 @media (max-width: 900px) {
@@ -321,7 +321,7 @@ main {
     max-width: 100%;
   }
   .product img {
-    height: 180px;
+    height: 40%;
     max-width: 90%;
     margin-bottom: 16px;
   }
