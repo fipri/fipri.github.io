@@ -261,8 +261,8 @@ main {
   width: auto;
 }
 .price img {
-  width: 8%;
-  height: 8%;
+  width: 62px;
+  height: 62px;
   object-fit: contain;
   margin-right: 12px;
   margin-bottom: 0;
