@@ -262,8 +262,8 @@ main {
   width: 100%;
 }
 .price img {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
   margin-right: 12px;
   margin-bottom: 0;
@@ -290,15 +290,22 @@ main {
   .product {
     max-width: 100%;
     padding: 20px 15px;
-    min-height: 320px;
+    min-height: 340px;
   }
   .product img {
-    height: 160px;
-    max-width: 200px;
+    height: 180px;
+    max-width: 220px;
   }
   .product h3 {
     font-size: 1.1em;
     min-height: 2.5em;
+  }
+  .price {
+    font-size: 1.3em;
+  }
+  .price img {
+    width: 42px;
+    height: 42px;
   }
 }
 @media (max-width: 600px) {
@@ -306,31 +313,31 @@ main {
   .modal-content { width: 92%; }
   .product-list {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 18px;
   }
   .product {
-    padding: 20px 15px;
-    min-height: 200px;
+    padding: 22px 15px;
+    min-height: 300px;
     max-width: 100%;
   }
   .product img {
-    height: 120px;
-    max-width: 100%;
-    margin-bottom: 15px;
+    height: 180px;
+    max-width: 90%;
+    margin-bottom: 16px;
   }
   .product h3 {
-    font-size: 1.05em;
-    min-height: 0;
-    margin-bottom: 15px;
+    font-size: 1.15em;
+    min-height: auto;
+    margin-bottom: 16px;
   }
   .price {
-    padding: 10px 15px;
-    font-size: 1.1em;
+    padding: 12px 18px;
+    font-size: 1.4em;
   }
   .price img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    width: 46px;
+    height: 46px;
+    margin-right: 15px;
   }
 }
 .product .expand-text {
