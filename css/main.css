@@ -303,8 +303,8 @@ main {
     font-size: 1.7em;
   }
   .price img {
-    width: 8%;
-    height: 8%;
+    width: 60px;
+    height: 60px;
   }
 }
 @media (max-width: 600px) {
